@@ -3,7 +3,7 @@ class SleepExercise {
   final String name;
   final String description;
   final int duration;
-  final int audioUrl;
+  final String audioUrl;
 
   SleepExercise({
     required this.category,
