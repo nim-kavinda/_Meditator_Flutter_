@@ -98,5 +98,7 @@ class MeditationProvider extends ChangeNotifier {
         audioUrl: "https://example.com/audio/embrace-yourself.mp3",
       ),
     ];
+
+    meditationExercises = List.from(_allMeditationExercises);
   }
 }

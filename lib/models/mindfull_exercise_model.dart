@@ -1,7 +1,7 @@
 class MindfullnessExercise {
   final String category;
   final String name;
-  final String discription;
+  final String description;
   final List<String> instruction;
   final int duration;
   final String instructionUrl;
@@ -10,7 +10,7 @@ class MindfullnessExercise {
   MindfullnessExercise({
     required this.category,
     required this.name,
-    required this.discription,
+    required this.description,
     required this.instruction,
     required this.duration,
     required this.instructionUrl,
@@ -22,7 +22,7 @@ class MindfullnessExercise {
     return MindfullnessExercise(
       category: json['category'],
       name: json['name'],
-      discription: json['description'],
+      description: json['description'],
       instruction: List<String>.from(json['instructions']),
       duration: json['duration'],
       instructionUrl: json['instructions_url'],
@@ -37,7 +37,7 @@ class MindfullnessExercise {
     return {
       'category': category,
       'name': name,
-      'description': discription,
+      'description': description,
       'instructions': instruction,
       'duration': duration,
       'instructions_url': instructionUrl,

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:meditor/models/sleep_exercise_model.dart';
 
-class SleepContentProvider extends ChangeNotifier {
+class SleepExerciseProvider extends ChangeNotifier {
   List<SleepExercise> _allSleepExercises = [];
   List<SleepExercise> sleepExercise = [];
 
-  SleepContentProvider() {
+  SleepExerciseProvider() {
     _allSleepExercises = [
       SleepExercise(
           category: "Sleep Stories",

@@ -10,7 +10,7 @@ class MindfullExerciseProvider extends ChangeNotifier {
       MindfullnessExercise(
         category: "Beginners",
         name: "Mindful Breathing",
-        discription:
+        description:
             "This mindfulness exercise is perfect for beginners. It focuses on the simple act of breathing to help you become more aware of the present moment. By paying attention to each inhale and exhale, you can learn to anchor yourself in the here and now, reducing feelings of stress and anxiety.",
         instruction: [
           "Find a comfortable seat.",
@@ -25,7 +25,7 @@ class MindfullExerciseProvider extends ChangeNotifier {
       MindfullnessExercise(
         category: "Daily Practice",
         name: "Gratitude Journal",
-        discription:
+        description:
             "This mindfulness exercise involves keeping a gratitude journal. By regularly writing down things you are grateful for, you can cultivate a positive mindset and improve your overall well-being. Reflect on positive experiences and record them in your journal to develop a greater sense of appreciation.",
         instruction: [
           "Find a quiet place to sit with your journal.",
@@ -41,7 +41,7 @@ class MindfullExerciseProvider extends ChangeNotifier {
         category: "Stress Relief",
         name: "Body Scan",
         imagePath: "assets/images/mindfull.png",
-        discription:
+        description:
             "This exercise helps to reduce stress by promoting awareness of physical sensations. It involves mentally scanning your body from head to toe, noticing any areas of tension and consciously relaxing them.",
         instruction: [
           "Lie down in a comfortable position.",
@@ -56,7 +56,7 @@ class MindfullExerciseProvider extends ChangeNotifier {
         category: "Focus",
         name: "Single-Tasking",
         imagePath: "assets/images/mindfull.png",
-        discription:
+        description:
             "Improve your focus by practicing single-tasking. This exercise encourages you to give your full attention to one task at a time, reducing the habit of multitasking.",
         instruction: [
           "Choose a task to focus on (e.g., washing dishes).",
@@ -71,7 +71,7 @@ class MindfullExerciseProvider extends ChangeNotifier {
         category: "Anxiety Relief",
         imagePath: "assets/images/mindfull.png",
         name: "Grounding Exercise",
-        discription:
+        description:
             "This exercise helps to alleviate anxiety by grounding you in the present moment. It involves using your senses to connect with your surroundings.",
         instruction: [
           "Find a comfortable position to sit.",
@@ -88,7 +88,7 @@ class MindfullExerciseProvider extends ChangeNotifier {
         category: "Mindfulness",
         name: "Mindful Walking",
         imagePath: "assets/images/mindfull.png",
-        discription:
+        description:
             "This exercise involves walking slowly and mindfully, paying attention to the sensation of your feet touching the ground and the movement of your body.",
         instruction: [
           "Find a quiet place to walk.",
@@ -103,7 +103,7 @@ class MindfullExerciseProvider extends ChangeNotifier {
         category: "Self-Acceptance",
         imagePath: "assets/images/mindfull.png",
         name: "Loving-Kindness Meditation",
-        discription:
+        description:
             "Cultivate self-acceptance and compassion through loving-kindness meditation. This exercise involves silently repeating phrases of goodwill towards yourself and others.",
         instruction: [
           "Find a comfortable seat and close your eyes.",
@@ -118,7 +118,7 @@ class MindfullExerciseProvider extends ChangeNotifier {
         category: "Relaxation",
         name: "Progressive Muscle Relaxation",
         imagePath: "assets/images/mindfull.png",
-        discription:
+        description:
             "This exercise helps to reduce physical tension and promote relaxation by progressively tensing and relaxing different muscle groups.",
         instruction: [
           "Find a comfortable position to sit or lie down.",
@@ -133,7 +133,7 @@ class MindfullExerciseProvider extends ChangeNotifier {
         category: "Energy",
         name: "Morning Stretch",
         imagePath: "assets/images/mindfull.png",
-        discription:
+        description:
             "Start your day with a mindful morning stretch. This exercise helps to wake up your body and mind, preparing you for the day ahead.",
         instruction: [
           "Stand up in a comfortable position.",
@@ -148,7 +148,7 @@ class MindfullExerciseProvider extends ChangeNotifier {
         category: "Creativity",
         imagePath: "assets/images/mindfull.png",
         name: "Mindful Drawing",
-        discription:
+        description:
             "Enhance your creativity through mindful drawing. This exercise involves focusing on the process of drawing without judgment or expectations.",
         instruction: [
           "Find a quiet place and gather your drawing materials.",
