@@ -19,7 +19,8 @@ class MindfullExerciseProvider extends ChangeNotifier {
           "Repeat for the duration of the exercise."
         ],
         duration: 5,
-        instructionUrl: "https://github.com/HGSChandeepa/Meditate",
+        instructionUrl:
+            "https://github.com/nim-kavinda/_Meditator_Flutter_.git",
         imagePath: "assets/images/mindfull.png",
       ),
       MindfullnessExercise(
@@ -35,7 +36,8 @@ class MindfullExerciseProvider extends ChangeNotifier {
         ],
         imagePath: "assets/images/mindfull.png",
         duration: 10,
-        instructionUrl: "https://github.com/HGSChandeepa/Meditate",
+        instructionUrl:
+            "https://github.com/nim-kavinda/_Meditator_Flutter_.git",
       ),
       MindfullnessExercise(
         category: "Stress Relief",
@@ -50,7 +52,8 @@ class MindfullExerciseProvider extends ChangeNotifier {
           "Slowly move your attention up through your body, relaxing each part as you go."
         ],
         duration: 15,
-        instructionUrl: "https://github.com/HGSChandeepa/Meditate",
+        instructionUrl:
+            "https://github.com/nim-kavinda/_Meditator_Flutter_.git",
       ),
       MindfullnessExercise(
         category: "Focus",
@@ -65,7 +68,8 @@ class MindfullExerciseProvider extends ChangeNotifier {
           "If your mind wanders, gently bring it back to the task at hand."
         ],
         duration: 10,
-        instructionUrl: "https://github.com/HGSChandeepa/Meditate",
+        instructionUrl:
+            "https://github.com/nim-kavinda/_Meditator_Flutter_.git",
       ),
       MindfullnessExercise(
         category: "Anxiety Relief",
@@ -82,7 +86,8 @@ class MindfullExerciseProvider extends ChangeNotifier {
           "Identify one thing you can taste."
         ],
         duration: 10,
-        instructionUrl: "https://github.com/HGSChandeepa/Meditate",
+        instructionUrl:
+            "https://github.com/nim-kavinda/_Meditator_Flutter_.git",
       ),
       MindfullnessExercise(
         category: "Mindfulness",
@@ -97,7 +102,8 @@ class MindfullExerciseProvider extends ChangeNotifier {
           "Focus on your breath and the rhythm of your movement."
         ],
         duration: 15,
-        instructionUrl: "https://github.com/HGSChandeepa/Meditate",
+        instructionUrl:
+            "https://github.com/nim-kavinda/_Meditator_Flutter_.git",
       ),
       MindfullnessExercise(
         category: "Self-Acceptance",
@@ -112,7 +118,8 @@ class MindfullExerciseProvider extends ChangeNotifier {
           "Extend these phrases to others: 'May you be happy. May you be healthy. May you be safe. May you live with ease.'"
         ],
         duration: 10,
-        instructionUrl: "https://github.com/HGSChandeepa/Meditate",
+        instructionUrl:
+            "https://github.com/nim-kavinda/_Meditator_Flutter_.git",
       ),
       MindfullnessExercise(
         category: "Relaxation",
@@ -127,7 +134,8 @@ class MindfullExerciseProvider extends ChangeNotifier {
           "Move up through your body, tensing and relaxing each muscle group."
         ],
         duration: 15,
-        instructionUrl: "https://github.com/HGSChandeepa/Meditate",
+        instructionUrl:
+            "https://github.com/nim-kavinda/_Meditator_Flutter_.git",
       ),
       MindfullnessExercise(
         category: "Energy",
@@ -142,7 +150,8 @@ class MindfullExerciseProvider extends ChangeNotifier {
           "Hold each stretch for a few breaths, focusing on the sensations in your body."
         ],
         duration: 5,
-        instructionUrl: "https://github.com/HGSChandeepa/Meditate",
+        instructionUrl:
+            "https://github.com/nim-kavinda/_Meditator_Flutter_.git",
       ),
       MindfullnessExercise(
         category: "Creativity",
@@ -157,10 +166,28 @@ class MindfullExerciseProvider extends ChangeNotifier {
           "If your mind wanders, gently bring your attention back to the drawing."
         ],
         duration: 10,
-        instructionUrl: "https://github.com/HGSChandeepa/Meditate",
+        instructionUrl:
+            "https://github.com/nim-kavinda/_Meditator_Flutter_.git",
       ),
     ];
 
     mindfullExercises = List.from(_allMindfullExercises);
+  }
+
+  //
+  List<MindfullnessExercise> getAllMindfullExercises() {
+    return mindfullExercises;
+  }
+
+  void searchMindfullExersice(String query) {
+    if (query.isEmpty) {
+      mindfullExercises = List.from(_allMindfullExercises);
+    } else {
+      mindfullExercises = _allMindfullExercises
+          .where((exerise) =>
+              exerise.name.toLowerCase().contains(query.toLowerCase()))
+          .toList();
+    }
+    notifyListeners();
   }
 }
