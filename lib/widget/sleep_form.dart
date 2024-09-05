@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:meditor/models/sleep_exercise_model.dart';
+import 'package:meditor/provider/custom_data-provider.dart';
 import 'package:meditor/utils/colors.dart';
 import 'package:meditor/widget/reuseble_widget/text_input.dart';
+import 'package:provider/provider.dart';
 
 class SleepForm extends StatefulWidget {
   const SleepForm({super.key});
@@ -118,6 +121,26 @@ class _SleepFormState extends State<SleepForm> {
                   ElevatedButton(
                     onPressed: () {
                       //todo ............
+                      if (_formKey.currentState!.validate()) {
+                        _formKey.currentState!.save();
+
+                        final sleepExercise = SleepExercise(
+                          category: _category,
+                          name: _name,
+                          description: _description,
+                          duration: _duration,
+                          audioUrl: _audioUrl,
+                        );
+
+                        _formKey.currentState!.reset();
+                        _category = "";
+                        _name = "";
+                        _description = "";
+                        _duration = 0;
+                        _audioUrl = "";
+                        Provider.of<CustomDataPrvider>(context, listen: false)
+                            .addSleepExercise(sleepExercise, context);
+                      }
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all<Color>(

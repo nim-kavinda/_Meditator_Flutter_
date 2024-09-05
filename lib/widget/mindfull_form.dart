@@ -2,8 +2,11 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:meditor/models/mindfull_exercise_model.dart';
+import 'package:meditor/provider/custom_data-provider.dart';
 import 'package:meditor/utils/colors.dart';
 import 'package:meditor/widget/reuseble_widget/text_input.dart';
+import 'package:provider/provider.dart';
 
 class MindfulForm extends StatefulWidget {
   const MindfulForm({super.key});
@@ -52,6 +55,7 @@ class _MindfulFormState extends State<MindfulForm> {
         ),
         const SizedBox(height: 20),
         Form(
+          key: _formKey,
           child: Column(
             children: [
               if (_imagepath != null)
@@ -181,6 +185,30 @@ class _MindfulFormState extends State<MindfulForm> {
                   ElevatedButton(
                     onPressed: () {
                       //todo ............
+                      if (_formKey.currentState!.validate()) {
+                        _formKey.currentState!.save();
+
+                        final imagepathString = _imagepath?.path ?? "";
+
+                        final mindfullnesExercise = MindfullnessExercise(
+                          category: _category,
+                          name: _name,
+                          description: _description,
+                          instruction: _instructions,
+                          duration: _duration,
+                          instructionUrl: _instructionsUrl,
+                          imagePath: imagepathString,
+                        );
+                        _formKey.currentState!.reset();
+                        _category = "";
+                        _name = "";
+                        _description = "";
+                        _instructions = [];
+                        _instructionsUrl = "";
+                        _imagepath = null;
+                        Provider.of<CustomDataPrvider>(context, listen: false)
+                            .addMindfullExercise(mindfullnesExercise, context);
+                      }
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all<Color>(

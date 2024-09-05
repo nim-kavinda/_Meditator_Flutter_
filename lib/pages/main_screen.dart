@@ -15,7 +15,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int _selctedIndex = 2;
+  int _selctedIndex = 0;
   static const List<Widget> _pages = [
     HomePage(),
     MindfullExercisePage(),

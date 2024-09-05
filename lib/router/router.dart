@@ -6,6 +6,7 @@ import 'package:meditor/models/mindfull_exercise_model.dart';
 import 'package:meditor/models/sleep_exercise_model.dart';
 import 'package:meditor/pages/functionPage.dart';
 import 'package:meditor/pages/main_screen.dart';
+import 'package:meditor/pages/main_screens/create_custome_exercise_page.dart';
 import 'package:meditor/pages/mindfull_exercise_details_page.dart';
 import 'package:meditor/pages/mindfull_exercises_timer_page.dart';
 import 'package:meditor/pages/sleep_exercise_timer.dart';
@@ -64,6 +65,13 @@ class RouterClass {
           final sleepExercise =
               SleepExercise.fromJson(jsonDecode(sleepExerciseJson!));
           return SleepExerciseTimer(sleepExercise: sleepExercise);
+        },
+      ),
+      GoRoute(
+        path: "/create",
+        name: RouteNames.create,
+        builder: (context, state) {
+          return const CreateExercisePage();
         },
       ),
     ],
